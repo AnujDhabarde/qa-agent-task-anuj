@@ -1,0 +1,29 @@
+# 🔐 Sensitive Files
+.env
+
+# 🧩 Node Dependencies
+node_modules/
+package-lock.json
+
+# 🧪 Test Artifacts
+test-results/
+*.log
+*.zip
+
+# 🧪 Playwright Reports
+playwright-report/
+04_test_runner/results/
+*.webm
+*.mp4
+*.png
+
+# 🧪 Python
+__pycache__/
+*.pyc
+
+# 💻 VSCode local settings
+.vscode/
+
+# Python virtual environment
+venv/
+

@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Valid Signup Flow",
+    "description": "Tests successful user signup.",
+    "url": "https://recruter.ai/signup",
+    "steps": [
+      { "action": "fill", "selector": "#email", "value": "user@example.com" },
+      { "action": "fill", "selector": "#password", "value": "SecurePass123" },
+      { "action": "click", "selector": "#signup-button" }
+    ]
+  },
+  {
+    "title": "Signup with Invalid Email",
+    "description": "Tests validation for invalid email format.",
+    "url": "https://recruter.ai/signup",
+    "steps": [
+      { "action": "fill", "selector": "#email", "value": "invalidemail" },
+      { "action": "fill", "selector": "#password", "value": "Password123" },
+      { "action": "click", "selector": "#signup-button" }
+    ]
+  },
+  {
+    "title": "Signup Missing Password",
+    "description": "Tests behavior when password field is empty.",
+    "url": "https://recruter.ai/signup",
+    "steps": [
+      { "action": "fill", "selector": "#email", "value": "user@example.com" },
+      { "action": "click", "selector": "#signup-button" }
+    ]
+  },
+  {
+    "title": "Signin with Valid Credentials",
+    "description": "Tests successful login.",
+    "url": "https://recruter.ai/login",
+    "steps": [
+      { "action": "fill", "selector": "#email", "value": "user@example.com" },
+      { "action": "fill", "selector": "#password", "value": "SecurePass123" },
+      { "action": "click", "selector": "#login-button" }
+    ]
+  },
+  {
+    "title": "Signin with Invalid Password",
+    "description": "Should show error on wrong password.",
+    "url": "https://recruter.ai/login",
+    "steps": [
+      { "action": "fill", "selector": "#email", "value": "user@example.com" },
+      { "action": "fill", "selector": "#password", "value": "WrongPass" },
+      { "action": "click", "selector": "#login-button" }
+    ]
+  },
+  {
+    "title": "Create Interview - Title Only",
+    "description": "Should allow interview creation with title only.",
+    "url": "https://recruter.ai/dashboard/interviews/new",
+    "steps": [
+      { "action": "fill", "selector": "#title", "value": "Frontend QA" },
+      { "action": "click", "selector": "#create-button" }
+    ]
+  },
+  {
+    "title": "Create Interview - Missing Title",
+    "description": "Should show validation error if title is missing.",
+    "url": "https://recruter.ai/dashboard/interviews/new",
+    "steps": [
+      { "action": "click", "selector": "#create-button" }
+    ]
+  },
+  {
+    "title": "Dashboard Access After Login",
+    "description": "Ensure dashboard loads after successful login.",
+    "url": "https://recruter.ai/dashboard",
+    "steps": [
+      { "action": "navigate", "selector": "" }
+    ]
+  },
+  {
+    "title": "Logout Functionality",
+    "description": "Tests user logout from dashboard.",
+    "url": "https://recruter.ai/dashboard",
+    "steps": [
+      { "action": "click", "selector": "#user-menu" },
+      { "action": "click", "selector": "#logout-button" }
+    ]
+  },
+  {
+    "title": "Password Field Hidden Characters",
+    "description": "Ensure password input masks characters.",
+    "url": "https://recruter.ai/signup",
+    "steps": [
+      { "action": "fill", "selector": "#password", "value": "Secret123!" }
+    ]
+  }
+]
